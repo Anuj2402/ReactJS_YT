@@ -29,4 +29,4 @@ const reactElement = {
 
 const mainCointainer = document.querySelector('#root');
 
-custonReact(reactElement, mainCointainer);
+customReact(reactElement, mainCointainer);
