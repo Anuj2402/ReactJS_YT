@@ -1,4 +1,4 @@
-function custonReact (reactElement, container){
+function customReact (reactElement, container){
     /*
     const domElement = document.createElement(reactElement.type);
     domElement.innerHTML = decument.reactElement.children;
