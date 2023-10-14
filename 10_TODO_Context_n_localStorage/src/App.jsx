@@ -5,22 +5,23 @@ import TodoForm from './components/TodoForm'
 import TodoItem from './components/TodoItem'
 
 function App() {
-  const [todos, setTodos] = useState([])
-
+  const [todos, setTodos] = useState([]) // by default the value will be Empty array
+//1.functionality -> addting items int the todo list
   const addTodo = (todo) => {
     setTodos((prev) => [{id: Date.now(), ...todo}, ...prev] )
   }
-
+//2.functionality -> updating items in the to do list
   const updateTodo = (id, todo) => {
     setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo )))
 
     
   }
-
+  
+//3. functionality-> deleting the items
   const deleteTodo = (id) => {
     setTodos((prev) => prev.filter((todo) => todo.id !== id))
   }
-
+//4. toggle or to check by traversing all the object properties using map
   const toggleComplete = (id) => {
     //console.log(id);
     setTodos((prev) => 
